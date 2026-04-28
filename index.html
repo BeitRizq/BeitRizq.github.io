@@ -213,6 +213,12 @@
     .site-footer { background: var(--bg-color); color: var(--text-color); text-align: center; padding: 1.5rem 0; font-size: .9rem; border-top: 1px solid var(--border-color); }
     .site-footer a { color: var(--accent-color); text-decoration: underline; }
 
+    /* Hide redundant Elfsight headers if any */
+    .elfsight-app-2c168b0a-53d8-4f7d-93f6-b2f24f18480a [class*="Header__Container"],
+    .elfsight-app-2c168b0a-53d8-4f7d-93f6-b2f24f18480a [class*="Header__Title"] {
+      display: none !important;
+    }
+
     @media (max-width: 768px) {
       .hero h1 { font-size: 2rem; }
       .hero p   { font-size: 1rem; }

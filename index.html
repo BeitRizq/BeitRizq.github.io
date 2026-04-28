@@ -57,20 +57,22 @@
       --text-color: #eee;
       --secondary-bg: #181818;
       --accent-color: #8b0d19; /* Vivid red theme color */
-      --accent-text: #fff;
+      --accent-text: #ffffff;
       --card-bg: #222;
       --icon-filter: invert(80%);
       --border-color: #333;
+      --btn-border: 1px solid rgba(255, 255, 255, 0.15);
     }
     [data-theme="light"] {
       --bg-color: #fcfcfc;
       --text-color: #111;
       --secondary-bg: #f4f4f4;
       --accent-color: #8b0d19; /* Keep vivid red for light mode */
-      --accent-text: #fff;
+      --accent-text: #ffffff;
       --card-bg: #fff;
       --icon-filter: invert(20%);
       --border-color: #ccc;
+      --btn-border: 1px solid rgba(0, 0, 0, 0.1);
     }
 
     /* -------------------------------------------------
@@ -100,10 +102,10 @@
       font-weight: 600;
       transition: transform .2s, background .2s, color .2s, border-color .2s;
       cursor: pointer;
-      border: none;
+      border: var(--btn-border);
     }
     .btn:hover { transform: translateY(-2px); }
-    .primary { background: var(--accent-color); color: var(--accent-text); }
+    .primary { background: var(--accent-color); color: var(--accent-text); box-shadow: 0 4px 15px rgba(139, 13, 25, 0.2); }
     .secondary { background: transparent; border: 2px solid var(--accent-color); color: var(--accent-color); }
     .map-btn { margin-top: .5rem; }
 
@@ -184,6 +186,9 @@
     .form-container { max-width: 600px; margin: 2rem auto; }
     .contact-form { text-align: left; }
     body[dir="rtl"] .contact-form { text-align: right; }
+    body[dir="rtl"] .contact-form input, body[dir="rtl"] .contact-form textarea {
+      direction: rtl;
+    }
     .contact-form .form-group { margin-bottom: 1rem; }
     .contact-form input, .contact-form textarea {
       width: 100%; padding: 0.8rem; border-radius: 4px;
@@ -272,7 +277,7 @@
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <h2 data-key="contactTitle">اتصل بنا</h2>
-    <p class="phone"><a href="tel:+201001204598" class="btn phone-btn">📞 010 0120 4598</a></p>
+    <p class="phone"><a href="tel:+201001204598" class="btn phone-btn">📞 <span dir="ltr" style="display: inline-block;">010 0120 4598</span></a></p>
     
     <div class="form-container">
       <form action="https://formsubmit.co/mgold742@gmail.com" method="POST" class="contact-form">

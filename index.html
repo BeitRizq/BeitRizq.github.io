@@ -8,13 +8,13 @@
   <meta name="description" content="بيت رزق هو متجر فضة فاخر يقدم قطعاً يدوية عالية الجودة من الأساور، الخواتم والقلائد المصنوعة بحرفية عربية أصيلة.">
   <meta property="og:title" content="بيت رزق – Luxury Silver Shop">
   <meta property="og:description" content="Explore premium handcrafted silver jewelry. Elegant, authentic, and made with love.">
-  <meta property="og:image" content="Images/Logo (1).png">
+  <meta property="og:image" content="Images/Logo (1).svg">
   <meta property="og:url" content="https://beit-rizq.github.io/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="بيت رزق – Luxury Silver Shop">
   <meta name="twitter:description" content="Explore premium handcrafted silver jewelry. Elegant, authentic, and made with love.">
-  <meta name="twitter:image" content="Images/Logo (1).png">
+  <meta name="twitter:image" content="Images/Logo (1).svg">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -22,7 +22,7 @@
     "name": "بيت رزق",
     "alternateName": "Beit Rizq",
     "url": "https://beit-rizq.github.io/",
-    "logo": "Images/Logo (1).png",
+    "logo": "Images/Logo (1).svg",
     "telephone": "+20-10-0120-4598",
     "address": {
       "@type": "PostalAddress",
@@ -46,7 +46,7 @@
     ]
   }
   </script>
-  <link rel="icon" href="Images/Logo (1).png" type="image/png">
+  <link rel="icon" href="Images/Logo (1).svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <style>
     /* -------------------------------------------------
@@ -56,8 +56,8 @@
       --bg-color: #111;
       --text-color: #eee;
       --secondary-bg: #181818;
-      --accent-color: #c0c0c0;
-      --accent-text: #111;
+      --accent-color: #8b0d19; /* Vivid red theme color */
+      --accent-text: #fff;
       --card-bg: #222;
       --icon-filter: invert(80%);
       --border-color: #333;
@@ -66,7 +66,7 @@
       --bg-color: #fcfcfc;
       --text-color: #111;
       --secondary-bg: #f4f4f4;
-      --accent-color: #7a7a7a;
+      --accent-color: #8b0d19; /* Keep vivid red for light mode */
       --accent-text: #fff;
       --card-bg: #fff;
       --icon-filter: invert(20%);
@@ -99,6 +99,8 @@
       text-decoration: none;
       font-weight: 600;
       transition: transform .2s, background .2s, color .2s, border-color .2s;
+      cursor: pointer;
+      border: none;
     }
     .btn:hover { transform: translateY(-2px); }
     .primary { background: var(--accent-color); color: var(--accent-text); }
@@ -173,11 +175,26 @@
     .map-container iframe { width: 100%; height: 100%; border: none; }
 
     /* -------------------------------------------------
-       Contact
+       Contact & Form
     ------------------------------------------------- */
     .contact { padding: 4rem 1rem; background: var(--secondary-bg); text-align: center; }
     .contact h2 { margin-bottom: 1.5rem; color: var(--accent-color); font-size: 2rem; }
     .phone .btn { background: var(--accent-color); color: var(--accent-text); font-size: 1.2rem; }
+    
+    .form-container { max-width: 600px; margin: 2rem auto; }
+    .contact-form { text-align: left; }
+    body[dir="rtl"] .contact-form { text-align: right; }
+    .contact-form .form-group { margin-bottom: 1rem; }
+    .contact-form input, .contact-form textarea {
+      width: 100%; padding: 0.8rem; border-radius: 4px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-color); color: var(--text-color);
+      font-family: inherit; font-size: 1rem;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {
+      outline: none; border-color: var(--accent-color);
+    }
+
     .social { margin-top: 1.5rem; display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap; }
     .social-btn { display: inline-flex; transition: transform 0.2s; }
     .social-btn:hover { transform: scale(1.1); }
@@ -201,7 +218,7 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="logo">
-      <img src="Images/Logo (1).png" alt="بيت رزق" style="height: 60px;">
+      <img src="Images/Logo (1).svg" alt="بيت رزق" style="height: 60px;">
     </div>
     <div class="controls">
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">🌙/☀️</button>
@@ -215,8 +232,7 @@
       <h1 data-key="heroTitle">تألّق الفضة الفاخرة</h1>
       <p data-key="heroTagline">المجوهرات التي تحكي قصة من الفخامة والعبقرية</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn primary" data-key="ctaContact">تواصل معنا</a>
-        <a href="tel:+201001204598" class="btn secondary" data-key="ctaCall">اتصل الآن</a>
+        <a href="https://wa.me/201001204598" target="_blank" class="btn primary" data-key="ctaWhatsApp">راسلنا على واتساب</a>
       </div>
     </div>
   </section>
@@ -262,7 +278,7 @@
   <section class="map-section" id="location">
     <h2 data-key="mapTitle">موقعنا</h2>
     <div class="map-container">
-      <iframe src="https://maps.google.com/maps?q=Beit%20Rizq&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://maps.google.com/maps?q=30.0555085,31.3477724&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <a href="https://maps.app.goo.gl/vjRJ3wNR5MDJojx86" target="_blank" class="btn map-btn" data-key="directionsBtn">احصل على الاتجاهات</a>
   </section>
@@ -271,6 +287,29 @@
   <section class="contact" id="contact">
     <h2 data-key="contactTitle">اتصل بنا</h2>
     <p class="phone"><a href="tel:+201001204598" class="btn phone-btn">📞 010 0120 4598</a></p>
+    
+    <div class="form-container">
+      <form action="https://formsubmit.co/mgold742@gmail.com" method="POST" class="contact-form">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Full Name / الاسم الكامل" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Email / البريد الإلكتروني" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" name="phone" placeholder="Mobile / رقم الهاتف" required>
+        </div>
+        <div class="form-group">
+          <input type="text" name="country" placeholder="Country / الدولة" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" placeholder="Message or Request / رسالتك أو طلبك" rows="4" required></textarea>
+        </div>
+        <!-- FormSubmit automatically includes CAPTCHA on the submission page -->
+        <button type="submit" class="btn primary" style="width:100%; font-size: 1.1rem; padding: 1rem;">Send / إرسال</button>
+      </form>
+    </div>
+
     <div class="social">
       <a href="https://www.instagram.com/beitrizq" target="_blank" class="social-btn" aria-label="Instagram"><img src="https://simpleicons.org/icons/instagram.svg" alt="Instagram"></a>
       <a href="https://www.facebook.com/BeitRizq" target="_blank" class="social-btn" aria-label="Facebook"><img src="https://simpleicons.org/icons/facebook.svg" alt="Facebook"></a>
@@ -291,8 +330,7 @@
       ar: {
         heroTitle: "تألّق الفضة الفاخرة",
         heroTagline: "المجوهرات التي تحكي قصة من الفخامة والعبقرية",
-        ctaContact: "تواصل معنا",
-        ctaCall: "اتصل الآن",
+        ctaWhatsApp: "راسلنا على واتساب",
         galleryTitle: "معرض منتجاتنا",
         reviewsTitle: "ماذا يقول عملاؤنا",
         mapTitle: "موقعنا",
@@ -302,8 +340,7 @@
       en: {
         heroTitle: "Luxury Silver Elegance",
         heroTagline: "Jewelry that tells a story of opulence and craftsmanship",
-        ctaContact: "Contact Us",
-        ctaCall: "Call Now",
+        ctaWhatsApp: "Message on WhatsApp",
         galleryTitle: "Our Gallery",
         reviewsTitle: "What Our Clients Say",
         mapTitle: "Our Location",
@@ -317,7 +354,7 @@
     function applyTranslations() {
       document.querySelectorAll("[data-key]").forEach(el => {
         const key = el.dataset.key;
-        if (translations[currentLang][key]) {
+        if (translations[currentLang] && translations[currentLang][key]) {
           el.textContent = translations[currentLang][key];
         }
       });

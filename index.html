@@ -322,8 +322,9 @@
   <!-- REVIEWS -->
   <section class="reviews" id="reviews">
     <h2 data-key="reviewsTitle">ماذا يقول عملاؤنا</h2>
-  <!-- Elfsight Google Reviews | Beit Rizq (lazy-loaded when visible) -->
-  <div class="elfsight-app-2c168b0a-53d8-4f7d-93f6-b2f24f18480a" data-elfsight-app-lazy></div>
+    <!-- Elfsight Google Reviews | Beit Rizq -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-2c168b0a-53d8-4f7d-93f6-b2f24f18480a" data-elfsight-app-lazy></div>
   </section>
 
   <main>
@@ -528,28 +529,6 @@
         });
       }, {rootMargin: '200px'});
       imgs.forEach(i => imgObserver.observe(i));
-    }
-
-      // Lazy-load Elfsight reviews widget when reviews section enters viewport
-    function lazyLoadThirdParties() {
-      const reviewsEl = document.querySelector('.reviews');
-      if (!reviewsEl) return;
-      if ('IntersectionObserver' in window) {
-        const revObserver = new IntersectionObserver((entries, obs) => {
-          entries.forEach(e => {
-            if (e.isIntersecting) {
-              const s = document.createElement('script');
-              s.src = 'https://elfsightcdn.com/platform.js';
-              s.defer = true;
-              document.body.appendChild(s);
-              obs.disconnect();
-            }
-          });
-        }, {rootMargin: '300px'});
-        revObserver.observe(reviewsEl);
-      } else {
-        const s = document.createElement('script'); s.src = 'https://elfsightcdn.com/platform.js'; s.defer = true; document.body.appendChild(s);
-      }
     }
 
     // --- INIT (defer non-critical work to idle) ---

@@ -1,0 +1,25 @@
+/*
+  Netlify-style _headers sample. Save as `_headers` in your publish folder to apply these headers.
+*/
+/* Apply to all files */
+/* /index.html */
+/* Strict security headers */
+/* Note: test CSP in report-only first to avoid blocking third-party widgets */
+/* */
+/* Path */
+/* /  */
+/*   Content-Security-Policy: default-src 'self' https:; script-src 'self' https://elfsightcdn.com; img-src 'self' data: https:; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; frame-src https://www.google.com; */
+/*   X-Frame-Options: SAMEORIGIN */
+/*   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload */
+/*   Referrer-Policy: strict-origin-when-cross-origin */
+/*   X-Content-Type-Options: nosniff */
+/*   Permissions-Policy: geolocation=(), microphone=(), camera=() */
+
+/* Example actual lines for _headers file (uncomment and adapt) */
+/* / */
+/*   Content-Security-Policy: default-src 'self' https:; script-src 'self' https://elfsightcdn.com; img-src 'self' data: https:; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; frame-src https://www.google.com; */
+/*   X-Frame-Options: SAMEORIGIN */
+/*   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload */
+/*   Referrer-Policy: strict-origin-when-cross-origin */
+/*   X-Content-Type-Options: nosniff */
+/*   Permissions-Policy: geolocation=(), microphone=(), camera=() */

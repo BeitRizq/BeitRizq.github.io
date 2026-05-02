@@ -8,13 +8,18 @@
   <meta name="description" content="بيت رزق هو متجر فضة فاخر يقدم قطعاً يدوية عالية الجودة من الأساور، الخواتم والقلائد المصنوعة بحرفية عربية أصيلة.">
   <meta property="og:title" content="بيت رزق – Luxury Silver Shop">
   <meta property="og:description" content="Explore premium handcrafted silver jewelry. Elegant, authentic, and made with love.">
-  <meta property="og:image" content="Images/Logo (1).svg">
+  <meta property="og:image" content="Images/WebP/Logo.webp">
   <meta property="og:url" content="https://beit-rizq.github.io/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="بيت رزق – Luxury Silver Shop">
   <meta name="twitter:description" content="Explore premium handcrafted silver jewelry. Elegant, authentic, and made with love.">
-  <meta name="twitter:image" content="Images/Logo (1).svg">
+  <meta name="twitter:image" content="Images/WebP/Logo.webp">
+  <meta http-equiv="Cache-Control" content="max-age=31536000, must-revalidate">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="preload" href="Images/WebP/Logo.webp" as="image">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"></noscript>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,22 +51,27 @@
     ]
   }
   </script>
-  <link rel="icon" href="Images/Logo (1).svg" type="image/svg+xml">
+  <link rel="icon" href="Images/WebP/Logo.webp" type="image/webp">
+  <!-- Basic security meta (prefer to set these as server headers) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' https://elfsightcdn.com 'unsafe-inline'; img-src 'self' data: https:; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; frame-src https://www.google.com;">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <style>
     /* -------------------------------------------------
        CSS Variables (Theming)
     ------------------------------------------------- */
     :root {
-      --bg-color: #111;
-      --text-color: #eee;
-      --secondary-bg: #181818;
-      --accent-color: #8b0d19; /* Vivid red theme color */
+      --bg-color: #0f0f10;
+      --text-color: #ffffff;
+      --secondary-bg: #161616;
+      --accent-color: #c62828; /* Slightly stronger red for contrast */
       --accent-text: #ffffff;
-      --card-bg: #222;
+      --card-bg: #1e1e1e;
       --icon-filter: invert(80%);
-      --border-color: #333;
-      --btn-border: 1px solid rgba(255, 255, 255, 0.15);
+      --border-color: #2c2c2c;
+      --btn-border: 1px solid rgba(255, 255, 255, 0.18);
     }
     [data-theme="light"] {
       --bg-color: #fcfcfc;
@@ -104,6 +114,7 @@
       cursor: pointer;
       border: var(--btn-border);
     }
+    a:focus, button:focus { outline: 3px dashed #ffd2d2; outline-offset: 3px; }
     .btn:hover { transform: translateY(-2px); }
     .primary { background: var(--accent-color); color: var(--accent-text); box-shadow: 0 4px 15px rgba(139, 13, 25, 0.2); }
     .secondary { background: transparent; border: 2px solid var(--accent-color); color: var(--accent-color); }
@@ -231,7 +242,10 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="logo">
-      <img src="Images/Logo (1).svg" alt="بيت رزق" style="height: 60px;">
+      <picture>
+        <source srcset="Images/WebP/Logo.webp" type="image/webp">
+        <img src="Images/Logo (1).svg" alt="بيت رزق" width="180" height="60" loading="lazy" style="height:60px; width:auto;">
+      </picture>
     </div>
     <div class="controls">
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">🌙/☀️</button>
@@ -254,30 +268,70 @@
   <section class="gallery" id="gallery">
     <h2 data-key="galleryTitle">معرض منتجاتنا</h2>
     <div class="grid">
-      <figure class="gallery-item"><img src="Images/Silver Products (1).jpeg" alt="Luxury silver product 1"></figure>
-      <figure class="gallery-item"><img src="Images/Silver Products (2).jpeg" alt="Luxury silver product 2"></figure>
-      <figure class="gallery-item"><img src="Images/Silver Products (3).jpeg" alt="Luxury silver product 3"></figure>
-      <figure class="gallery-item"><img src="Images/Silver Products (4).jpeg" alt="Luxury silver product 4"></figure>
-      <figure class="gallery-item"><img src="Images/Silver Products (5).jpeg" alt="Luxury silver product 5"></figure>
-      <figure class="gallery-item"><img src="Images/Silver Products (6).jpeg" alt="Luxury silver product 6"></figure>
-      <figure class="gallery-item"><img src="Images/Silver Products (7).jpeg" alt="Luxury silver product 7"></figure>
-      <figure class="gallery-item"><img src="Images/Silver Products (8).jpeg" alt="Luxury silver product 8"></figure>
+      <figure class="gallery-item">
+        <picture>
+          <source srcset="Images/WebP/Silver Products (1).webp" type="image/webp">
+          <img src="Images/Silver Products (1).jpeg" alt="Luxury silver product 1" width="800" height="800" loading="lazy" data-webp="Images/WebP/Silver Products (1).webp">
+        </picture>
+      </figure>
+      <figure class="gallery-item">
+        <picture>
+          <source srcset="Images/WebP/Silver Products (2).webp" type="image/webp">
+          <img src="Images/Silver Products (2).jpeg" alt="Luxury silver product 2" width="800" height="800" loading="lazy" data-webp="Images/WebP/Silver Products (2).webp">
+        </picture>
+      </figure>
+      <figure class="gallery-item">
+        <picture>
+          <source srcset="Images/WebP/Silver Products (3).webp" type="image/webp">
+          <img src="Images/Silver Products (3).jpeg" alt="Luxury silver product 3" width="800" height="800" loading="lazy" data-webp="Images/WebP/Silver Products (3).webp">
+        </picture>
+      </figure>
+      <figure class="gallery-item">
+        <picture>
+          <source srcset="Images/WebP/Silver Products (4).webp" type="image/webp">
+          <img src="Images/Silver Products (4).jpeg" alt="Luxury silver product 4" width="800" height="800" loading="lazy" data-webp="Images/WebP/Silver Products (4).webp">
+        </picture>
+      </figure>
+      <figure class="gallery-item">
+        <picture>
+          <source srcset="Images/WebP/Silver Products (5).webp" type="image/webp">
+          <img src="Images/Silver Products (5).jpeg" alt="Luxury silver product 5" width="800" height="800" loading="lazy" data-webp="Images/WebP/Silver Products (5).webp">
+        </picture>
+      </figure>
+      <figure class="gallery-item">
+        <picture>
+          <source srcset="Images/WebP/Silver Products (6).webp" type="image/webp">
+          <img src="Images/Silver Products (6).jpeg" alt="Luxury silver product 6" width="800" height="800" loading="lazy" data-webp="Images/WebP/Silver Products (6).webp">
+        </picture>
+      </figure>
+      <figure class="gallery-item">
+        <picture>
+          <source srcset="Images/WebP/Silver Products (7).webp" type="image/webp">
+          <img src="Images/Silver Products (7).jpeg" alt="Luxury silver product 7" width="800" height="800" loading="lazy" data-webp="Images/WebP/Silver Products (7).webp">
+        </picture>
+      </figure>
+      <figure class="gallery-item">
+        <picture>
+          <source srcset="Images/WebP/Silver Products (8).webp" type="image/webp">
+          <img src="Images/Silver Products (8).jpeg" alt="Luxury silver product 8" width="800" height="800" loading="lazy" data-webp="Images/WebP/Silver Products (8).webp">
+        </picture>
+      </figure>
     </div>
   </section>
 
   <!-- REVIEWS -->
   <section class="reviews" id="reviews">
     <h2 data-key="reviewsTitle">ماذا يقول عملاؤنا</h2>
-    <!-- Elfsight Google Reviews | Beit Rizq -->
-    <script src="https://elfsightcdn.com/platform.js" async></script>
-    <div class="elfsight-app-2c168b0a-53d8-4f7d-93f6-b2f24f18480a" data-elfsight-app-lazy></div>
+  <!-- Elfsight Google Reviews | Beit Rizq (lazy-loaded when visible) -->
+  <div class="elfsight-app-2c168b0a-53d8-4f7d-93f6-b2f24f18480a" data-elfsight-app-lazy></div>
   </section>
 
+  <main>
   <!-- MAP -->
   <section class="map-section" id="location">
     <h2 data-key="mapTitle">موقعنا</h2>
     <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.3497205258313!2d31.3477724!3d30.055508500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fd1852aab5f%3A0xe222489d8785d224!2z2YHYttmK2KfYqiDYqNmK2Kog2LHYstmC!5e0!3m2!1sen!2seg!4v1777378479763!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe title="Beit Rizq location map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.3497205258313!2d31.3477724!3d30.055508500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fd1852aab5f%3A0xe222489d8785d224!2z2YHYttmK2KfYqiDYqNmK2Kog2LHYstmC!5e0!3m2!1sen!2seg!4v1777378479763!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <a href="https://maps.app.goo.gl/vjRJ3wNR5MDJojx86" target="_blank" class="btn map-btn" data-key="directionsBtn">احصل على الاتجاهات</a>
   </section>
@@ -310,10 +364,22 @@
     </div>
 
     <div class="social">
-      <a href="https://www.instagram.com/beitrizq" target="_blank" class="social-btn" aria-label="Instagram"><img src="https://simpleicons.org/icons/instagram.svg" alt="Instagram"></a>
-      <a href="https://www.facebook.com/BeitRizq" target="_blank" class="social-btn" aria-label="Facebook"><img src="https://simpleicons.org/icons/facebook.svg" alt="Facebook"></a>
-      <a href="https://wa.me/201001204598" target="_blank" class="social-btn" aria-label="WhatsApp"><img src="https://simpleicons.org/icons/whatsapp.svg" alt="WhatsApp"></a>
-      <a href="https://www.tiktok.com/@beitrizq?_r=1&_t=ZS-95ukS9pSSYu" target="_blank" class="social-btn" aria-label="TikTok"><img src="https://simpleicons.org/icons/tiktok.svg" alt="TikTok"></a>
+      <a href="https://www.instagram.com/beitrizq" target="_blank" class="social-btn" aria-label="Instagram">
+        <!-- Inline SVG for Instagram (small) -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18.2" cy="5.8" r="0.6" fill="currentColor"/></svg>
+      </a>
+      <a href="https://www.facebook.com/BeitRizq" target="_blank" class="social-btn" aria-label="Facebook">
+        <!-- Inline SVG for Facebook -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 0 1 1-1h2V2z" fill="currentColor"/></svg>
+      </a>
+      <a href="https://wa.me/201001204598" target="_blank" class="social-btn" aria-label="WhatsApp">
+        <!-- Inline SVG for WhatsApp -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M21 12.2a9 9 0 1 0-2.5 5.8L21 22l-2.9-0.8A9 9 0 0 0 21 12.2z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 14c-.4-.2-2.3-1.1-2.6-1.2-.4-.1-.7-.1-1 .2l-0.7.7c-0.2.2-.5.3-.9.1-1-.4-3.3-1.9-3.3-3.9 0-2 .9-2.7 1.2-3 .2-.3 0-.7-.2-1L8.7 4.7C8.4 4.4 8 4.5 7.6 4.6 6.2 5 4.5 6.5 4.5 9.1s1.8 5.3 2.1 5.7c0.2.3 3.6 5.7 9.4 5.7 2.2 0 3.7-.9 4.5-1.6.8-.7 1.2-2.1 1.3-2.4 0.1-.3 0-.6-.2-.8-0.2-.2-0.9-.6-1.3-.8z" fill="currentColor"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@beitrizq?_r=1&_t=ZS-95ukS9pSSYu" target="_blank" class="social-btn" aria-label="TikTok">
+        <!-- Inline SVG for TikTok -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M9 8v8a4 4 0 1 0 4-4V6h3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
     </div>
   </section>
 
@@ -349,9 +415,9 @@
     };
 
     let currentLang = "ar";
-
+    const translationNodes = Array.from(document.querySelectorAll('[data-key]'));
     function applyTranslations() {
-      document.querySelectorAll("[data-key]").forEach(el => {
+      translationNodes.forEach(el => {
         const key = el.dataset.key;
         if (translations[currentLang] && translations[currentLang][key]) {
           el.textContent = translations[currentLang][key];
@@ -373,21 +439,25 @@
       }
     }
 
-    document.getElementById("lang-toggle").addEventListener("click", () => {
-      currentLang = currentLang === "ar" ? "en" : "ar";
-      setDirection(currentLang);
-      applyTranslations();
-    });
+    const langToggleEl = document.getElementById('lang-toggle');
+    if (langToggleEl) {
+      langToggleEl.addEventListener('click', () => {
+        currentLang = currentLang === 'ar' ? 'en' : 'ar';
+        setDirection(currentLang);
+        applyTranslations();
+      });
+    }
 
     // --- THEME TOGGLE ---
     const themeToggleBtn = document.getElementById('theme-toggle');
     const htmlEl = document.documentElement;
-    
-    themeToggleBtn.addEventListener('click', () => {
-      const currentTheme = htmlEl.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      htmlEl.setAttribute('data-theme', newTheme);
-    });
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        const currentTheme = htmlEl.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        htmlEl.setAttribute('data-theme', newTheme);
+      });
+    }
 
     // --- LIGHTBOX ---
     function createLightbox() {
@@ -412,14 +482,90 @@
         }
       };
     }
-    const lightbox = createLightbox();
-    document.querySelectorAll(".gallery-item img").forEach(img => {
-      img.addEventListener("click", () => lightbox.show(img.src));
-    });
+    // Lazy-init lightbox to reduce startup cost
+    let lightbox;
+    function initLightboxIfNeeded() {
+      if (lightbox) return;
+      lightbox = createLightbox();
+      document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', () => lightbox.show(img.dataset.src || img.src));
+      });
+    }
+    // Observe when gallery intersects viewport, then init
+    if ('IntersectionObserver' in window) {
+      const galleryObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            initLightboxIfNeeded();
+            obs.disconnect();
+          }
+        });
+      });
+      const galleryEl = document.querySelector('.gallery');
+      if (galleryEl) galleryObserver.observe(galleryEl);
+    } else {
+      // Fallback
+      initLightboxIfNeeded();
+    }
 
-    // --- INIT ---
+    // --- LAZY-SWAP WEBP FOR IMAGES ---
+    function lazySwapWebP() {
+      if (!('IntersectionObserver' in window)) return;
+      const imgs = document.querySelectorAll('img[data-webp]');
+      const imgObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            const webp = img.getAttribute('data-webp');
+            if (webp) {
+              const test = new Image();
+              test.src = webp;
+              test.onload = () => {
+                const parent = img.parentNode;
+                const source = parent && parent.querySelector('source[type="image/webp"]');
+                if (source) source.srcset = webp;
+                img.src = webp;
+              };
+            }
+            obs.unobserve(img);
+          }
+        });
+      }, {rootMargin: '200px'});
+      imgs.forEach(i => imgObserver.observe(i));
+    }
+
+      // Lazy-load Elfsight reviews widget when reviews section enters viewport
+    function lazyLoadThirdParties() {
+      const reviewsEl = document.querySelector('.reviews');
+      if (!reviewsEl) return;
+      if ('IntersectionObserver' in window) {
+        const revObserver = new IntersectionObserver((entries, obs) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              const s = document.createElement('script');
+              s.src = 'https://elfsightcdn.com/platform.js';
+              s.defer = true;
+              document.body.appendChild(s);
+              obs.disconnect();
+            }
+          });
+        }, {rootMargin: '300px'});
+        revObserver.observe(reviewsEl);
+      } else {
+        const s = document.createElement('script'); s.src = 'https://elfsightcdn.com/platform.js'; s.defer = true; document.body.appendChild(s);
+      }
+    }
+
+    // --- INIT (defer non-critical work to idle) ---
     setDirection(currentLang);
     applyTranslations();
+    const idle = window.requestIdleCallback || function(fn){ return setTimeout(fn, 200); };
+    idle(() => {
+      try { initLightboxIfNeeded(); } catch(e) { /* safe fallback */ }
+      try { lazySwapWebP(); } catch(e) { /* safe fallback */ }
+      try { lazyLoadThirdParties(); } catch(e) { /* safe fallback */ }
+    });
   </script>
+  </main>
 </body>
 </html>
